@@ -1,0 +1,64 @@
+import React, { Component } from 'react';
+import MuiThemeProvider from 
+'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
+export class SignUp extends Component {
+  continue = e => {
+      e.preventDefault();
+      this.props.nextStep();
+  }
+
+
+    render() {
+        const {values} = this.props;
+        
+        return (
+            <MuiThemeProvider>
+                <React.Fragment>
+                    <AppBar title="Enter user Details"/>
+                    <TextField
+                        hintText="Enter First name"
+                        floatin gLabellText="First naME"
+                        onChange={this.props}
+                        defaultValue={values.firstName}
+                        />
+                        <br/>
+
+                    <TextField
+                        hintText="Enter Last name"
+                        floatin gLabellText="Lst naME"
+                        onChange={this.props}
+                        defaultValue={values.lastName}
+                        />
+                        <br/>
+
+                        <TextField
+                        hintText="Enter email Address"
+                        floatin gLabellText="email"
+                        onChange={this.props}
+                        defaultValue={values.email}
+                        />
+                        <br/>
+                        <RaisedButton 
+                        label="Continue"
+                        primary={true}
+                        style={StyleSheet.button}
+                        onClick={this.continue}
+                        />
+
+                </React.Fragment>
+                
+            </MuiThemeProvider>
+        )
+    }
+}
+
+const styles ={
+    button:{
+        margin: 15
+    }
+}
+
+export default SignUp;
