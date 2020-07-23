@@ -6,4 +6,4 @@
 # Snaps.
 ![](mi/mi1.PNG)
 ![](mi/mi2.PNG)
-![](mi/mi2.PNG)
+![](mi/mi3.PNG)
